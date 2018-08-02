@@ -13,6 +13,10 @@
 		1E49B5F021128F6F00F75F2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E49B5EF21128F6F00F75F2A /* Assets.xcassets */; };
 		1E49B5F321128F6F00F75F2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E49B5F121128F6F00F75F2A /* LaunchScreen.storyboard */; };
 		1E49B5F621128F6F00F75F2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E49B5F521128F6F00F75F2A /* main.m */; };
+		1E49B5FE2112E36D00F75F2A /* NSString+A.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E49B5FD2112E36D00F75F2A /* NSString+A.m */; };
+		1E49B6012112E39600F75F2A /* NSString+B.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E49B6002112E39600F75F2A /* NSString+B.m */; };
+		1E49B6042112E9DA00F75F2A /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E49B6032112E9DA00F75F2A /* MyView.m */; };
+		1E49B6062112E9E500F75F2A /* MyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E49B6052112E9E500F75F2A /* MyView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		1E49B5F221128F6F00F75F2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E49B5F421128F6F00F75F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E49B5F521128F6F00F75F2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1E49B5FC2112E36D00F75F2A /* NSString+A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+A.h"; sourceTree = "<group>"; };
+		1E49B5FD2112E36D00F75F2A /* NSString+A.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+A.m"; sourceTree = "<group>"; };
+		1E49B5FF2112E39600F75F2A /* NSString+B.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+B.h"; sourceTree = "<group>"; };
+		1E49B6002112E39600F75F2A /* NSString+B.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+B.m"; sourceTree = "<group>"; };
+		1E49B6022112E9DA00F75F2A /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		1E49B6032112E9DA00F75F2A /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		1E49B6052112E9E500F75F2A /* MyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,13 @@
 				1E49B5E721128F6E00F75F2A /* AppDelegate.m */,
 				1E49B5E921128F6E00F75F2A /* ViewController.h */,
 				1E49B5EA21128F6E00F75F2A /* ViewController.m */,
+				1E49B5FF2112E39600F75F2A /* NSString+B.h */,
+				1E49B6002112E39600F75F2A /* NSString+B.m */,
+				1E49B5FC2112E36D00F75F2A /* NSString+A.h */,
+				1E49B5FD2112E36D00F75F2A /* NSString+A.m */,
+				1E49B6022112E9DA00F75F2A /* MyView.h */,
+				1E49B6032112E9DA00F75F2A /* MyView.m */,
+				1E49B6052112E9E500F75F2A /* MyView.xib */,
 				1E49B5EC21128F6E00F75F2A /* Main.storyboard */,
 				1E49B5EF21128F6F00F75F2A /* Assets.xcassets */,
 				1E49B5F121128F6F00F75F2A /* LaunchScreen.storyboard */,
@@ -128,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E49B6062112E9E500F75F2A /* MyView.xib in Resources */,
 				1E49B5F321128F6F00F75F2A /* LaunchScreen.storyboard in Resources */,
 				1E49B5F021128F6F00F75F2A /* Assets.xcassets in Resources */,
 				1E49B5EE21128F6E00F75F2A /* Main.storyboard in Resources */,
@@ -143,7 +162,10 @@
 			files = (
 				1E49B5EB21128F6E00F75F2A /* ViewController.m in Sources */,
 				1E49B5F621128F6F00F75F2A /* main.m in Sources */,
+				1E49B6042112E9DA00F75F2A /* MyView.m in Sources */,
 				1E49B5E821128F6E00F75F2A /* AppDelegate.m in Sources */,
+				1E49B5FE2112E36D00F75F2A /* NSString+A.m in Sources */,
+				1E49B6012112E39600F75F2A /* NSString+B.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
