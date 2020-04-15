@@ -45,16 +45,21 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Hello, World!");
         
         NSArray *stateArray = @[@"1",@"5",@"-12",@"-1",@"0",@"-13",@"2",@"-14",@"-11",@"-10",@"3",@"4"];
-
+        NSArray *timeArray = @[@"1586910495",@"1586910435",@"1586920495",@"1583910495",@"1596910495",@"1586930495",@"1586913495",@"1586910695",@"1586904954",@"1586914435",@"1586916435",@"1586940435"];
+        
         NSMutableArray *orignArray = [NSMutableArray new];
-        for (NSInteger i = 0 ; i < stateArray.count; i++) {
+        NSInteger allCount = 34;
+        for (NSInteger i = 0 ; i < allCount; i++) {
             MatchInifo *m = [MatchInifo new];
-            NSInteger random = i;
+            NSInteger random = arc4random()%11;//状态
             NSString *stateString = stateArray[random];
+            
+            NSInteger randomTime = arc4random()%11;//时间
+            NSString *timeString = timeArray[randomTime];
             
             m.state = stateString;
             m.sortState = m.state;
-            
+            m.time = timeString;
             if ([m.state integerValue] == -1) {
                 m.sortState = @"-20";
             }else if ([m.state integerValue] == -10){
@@ -65,7 +70,7 @@ int main(int argc, const char * argv[]) {
 
         NSString *orignState = @"";
         for (MatchInifo * mi in orignArray) {
-            orignState = [NSString stringWithFormat:@"%@、%@",orignState,mi.state];
+            orignState = [NSString stringWithFormat:@"%@、%@|%@",orignState,mi.state,mi.time];
         }
         NSLog(@"旧数据：state:%@",orignState);
                 
@@ -79,11 +84,13 @@ int main(int argc, const char * argv[]) {
             
         }];
         
-        NSArray *newArray = [orignArray sortedArrayUsingDescriptors:@[stateDescriptor]];
+        NSSortDescriptor *timeDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"time" ascending:YES];
+        
+        NSArray *newArray = [orignArray sortedArrayUsingDescriptors:@[stateDescriptor,timeDescriptor]];
         
         NSString *newState = @"";
         for (MatchInifo * mi in newArray) {
-            newState = [NSString stringWithFormat:@"%@、%@",newState,mi.state];
+            newState = [NSString stringWithFormat:@"%@、%@|%@",newState,mi.state,mi.time];
         }
         NSLog(@"新数据：state:%@",newState);
         //        NSArray *array = @[]
